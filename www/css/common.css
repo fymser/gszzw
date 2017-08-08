@@ -1,0 +1,57 @@
+/*************样式初始化*****************/
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+a{text-decoration: none;}
+ul li{
+    list-style-type: none;
+}
+h1, h2, h3, h4, h5, h6{font-weight:normal;}
+body { font-size:14px;background:#FAFAFA; color:#333; font-family: arial,"Hiragino Sans GB","Microsoft Yahei","微软雅黑","宋体",Tahoma,Arial,Helvetica,STHeiti;}
+/**************样式初始化****************/
+/* 设置滚动条的样式 */
+.clearboth::after{
+	content:"";
+	display:block;
+	clear:both;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+}
+.header-navbar{
+	background:#023588;
+	width:100%;
+	height:30px;
+}
+.navbar ul li a:hover{
+	background:#388860;
+}
+.hot-nav ul li a:hover{
+	background:#388860;
+	color:#fff;
+}
+.footer-box{
+	width:100%;
+	height:36px;
+	text-align:center;
+	margin-top:20px;
+}
+.footer-box p{
+	height:36px;
+	line-height:36px;
+	color:#999;
+}
+.footer-box p a{
+	color:#fff;
+	margin:0 10px;
+}

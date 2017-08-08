@@ -1,0 +1,340 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="keywords" content=""/>
+		<meta name="description" content=""/>
+		<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=Edge" />
+		<title>工商注册导航网</title>
+		<link href="css/common.css" type="text/css" rel="stylesheet"/>
+		<link href="css/header.css" type="text/css" rel="stylesheet"/>
+		<link href="css/index.css" type="text/css" rel="stylesheet"/>
+		<link href="css/inner.css" type="text/css" rel="stylesheet"/>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/public.js"></script>
+	</head>
+	
+	<body>
+		<div style="width:100%;height:auto;overflow:hidden;">
+			<!--header start-->
+			<div class="header">
+				<div class="header-navbar">
+					<div class="navbar">
+						<span class="date">2017-08-10 星期二</span>
+						<ul>
+							<li>
+								<a href="#" title="">资质平台转让</a>
+							</li>
+							<li>
+								<a href="#" title="">香港注册公司</a>
+							</li>
+							<li>
+								<a href="#" title="">更多服务</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<!--搜索box-->
+				<div style="width:100%;background:#fff;">
+					<div class="search">
+						<!--工商搜索-->
+						<div class="search-box gszz-box">
+							<div class="input-box">
+								<a href="https://www.baidu.com/"  target="_blank" style="width:340px;">
+									<img border="0" align="bottom" alt="Baidu" src="img/gszz_logo.png">
+								</a>
+								<input id="word01" type="text" name="word" size="40">
+								<a href="#" class="submit" target="_blank">站内搜索</a>
+							</div>
+							<span class="togglebtn btn">切换至百度搜索</span>
+							<a href="#" class="togglebtn" style="right:50px;">我要注册公司</a>		<div class="area-list">
+								<span>各地工商局<i class="arrow-down"></i></span>
+								<div class="list-item hidden">
+									<dl>
+										<dt>华北</dt>
+										<dd><a href="#">北京</a></dd>	
+										<dd><a href="#">天津</a></dd>	
+										<dd><a href="#">上海</a></dd>	
+										<dd><a href="#">河北</a></dd>	
+										<dd><a href="#">河南</a></dd>
+										<dd><a href="#">河北</a></dd>	
+										<dd><a href="#">河南</a></dd>
+										<dd><a href="#">河南</a></dd>				
+									</dl>
+									<dl>
+										<dt>东北</dt>
+										<dd><a href="#">北京</a></dd>	
+										<dd><a href="#">天津</a></dd>	
+										<dd><a href="#">上海</a></dd>	
+										<dd><a href="#">河北</a></dd>	
+										<dd><a href="#">河南</a></dd>	
+									</dl>
+									<dl>
+										<dt>华东</dt>
+										<dd><a href="#">北京</a></dd>	
+										<dd><a href="#">天津</a></dd>	
+										<dd><a href="#">上海</a></dd>	
+										<dd><a href="#">河北</a></dd>	
+										<dd><a href="#">河南</a></dd>	
+									</dl>
+									<dl>
+										<dt>华南</dt>
+										<dd><a href="#">北京</a></dd>	
+										<dd><a href="#">天津</a></dd>	
+										<dd><a href="#">上海</a></dd>	
+										<dd><a href="#">河北</a></dd>	
+										<dd><a href="#">河南</a></dd>	
+									</dl>
+									<dl>
+										<dt>华中</dt>
+										<dd><a href="#">北京</a></dd>	
+										<dd><a href="#">天津</a></dd>	
+										<dd><a href="#">上海</a></dd>	
+										<dd><a href="#">河北</a></dd>	
+										<dd><a href="#">河南</a></dd>	
+									</dl>
+									<dl>
+										<dt>西南</dt>
+										<dd><a href="#">北京</a></dd>	
+										<dd><a href="#">天津</a></dd>	
+										<dd><a href="#">上海</a></dd>	
+										<dd><a href="#">河北</a></dd>	
+										<dd><a href="#">河南</a></dd>	
+									</dl>
+									<dl>
+										<dt>西北</dt>
+										<dd><a href="#">北京</a></dd>	
+										<dd><a href="#">天津</a></dd>	
+										<dd><a href="#">上海</a></dd>	
+										<dd><a href="#">河北</a></dd>	
+										<dd><a href="#">河南</a></dd>	
+									</dl>
+								</div>	
+							</div>			
+						</div>
+						<!--工商搜索-->
+
+						<!--百度搜索-->
+						<div class="search-box hidden baidu-box">
+							<div class="input-box">
+								<a href="https://www.baidu.com/"  target="_blank">
+									<img border="0" align="bottom" alt="Baidu" src="img/baidu-logo.png">
+								</a>
+								<input id="word" type="text" name="word" size="40">
+								<a href="#" class="submit" target="_blank">百度一下</a>
+							</div>
+							<span class="togglebtn btn">返回工商搜索</span>		
+						</div>
+						<!--百度搜索-->
+					</div>
+				</div>
+				<!--搜索box-->
+				<script type="text/javascript">
+					$(function(){
+						(function(){
+							$('#sub_web').click(function(){
+								console.log('aa');
+								var web_name = $('#web_name').val();
+								var web_url = $('#web_url').val();
+							
+								if(!(web_url.indexOf('http') != -1 || web_url.indexOf('https') != -1)){
+									web_url = 'http://' + web_url; 
+								}
+
+								var web_mode = $('.website-li').eq(0).clone().removeAttr('style');	//复制用于追加的模板并移除style属性将其显示
+
+								$.post('/index.php/home/index/set_cookie.html',{name:web_name,url:web_url},function(data){
+									if(data == 1){
+										/*
+										注意：动态生成dom元素如果之前绑定有相应的事件，则这里必须重新再次绑定
+										否则，因为之前绑定的事件是文档载入后绑定的，这里文档载入动态元素还未生
+										成所以之前绑定的元素事件无效。
+										*/
+										var web_mode = $('.website-li').eq(0).clone().removeAttr('style');	//复制用于追加的模板并移除style属性将其显示
+										//给动态元素绑定相应的事件
+										web_mode.find('.close-icon').click(function(){
+											var _this = $(this);
+											if(confirm('您确定要删除此网址吗？')){
+												var name = $(this).siblings('a').text();
+												$.post('/index.php/home/index/del_cookie.html',{name:name},function(data){
+													if(data == 1){
+														_this.parent().remove();
+													}
+												});
+											}
+										});
+										web_mode.find('a').text(web_name);	//修改网站名称
+										web_mode.find('a').attr('href',web_url);	//修改网站地址
+										web_mode.insertBefore('.addsite');	//将模板追加到添加按钮之前
+										$('.submit-websitebox').hide();
+									}
+								});
+								console.log('adddda');
+							});
+
+
+							//提交网站js 
+							$('.addsite').click(function(){
+								$('.submit-websitebox').show();
+								$('#web_name').val('');
+								$('#web_url').val('');
+								return false;
+							});
+
+							$('.close-icon').click(function(){
+								var _this = $(this);
+								if(confirm('您确定要删除此网址吗？')){
+									var name = $(this).siblings('a').text();
+									$.post('/index.php/home/index/del_cookie.html',{name:name},function(data){
+										if(data == 1){
+											_this.parent().remove();
+										}
+									});
+								}
+							});
+							$('.submit-box').find('.close').click(function(){
+								$('.submit-websitebox').hide();
+							});
+						}());
+						//切换百度搜索
+						$(".gszz-box .btn").click(function(){
+							$(".gszz-box").hide();
+							$(".baidu-box").show();
+						});
+
+						//切换站内搜索
+						$(".baidu-box .btn").click(function(){
+							$(".gszz-box").show();
+							$(".baidu-box").hide();
+						});
+
+						//工商地区切换
+						$(".area-list > span").click(function(){
+							$(this).next().show();
+						});
+						
+						//阻止冒泡
+						$(".area-list").click(function(event){
+							event.stopPropagation();
+						});
+
+						$("body").click(function(){
+							$(".area-list .list-item").hide();
+						});
+
+						//百度搜索跳转
+						$(".baidu-box .submit").click(function(){
+							var keywords = $(this).prev().val();
+							var url = 'https://www.baidu.com/s?wd='+ keywords + '&ie=utf-8&cl=3&t=12&fr=news';
+							$(this).attr("href",url);
+						});
+
+					});
+					
+				</script>
+				
+			</div>
+			<!--header end-->
+			
+			<!--mainbox start-->
+			<div class="main">
+				
+				<div class="colum-type">
+					<dl class="clearboth">
+						<dt>栏目类别</dt>
+					</dl>
+				</div>
+				<div class="colum-list">
+					<div class="clearboth">
+						<div class="title">栏目名称</div>
+						<div class="list">
+							<ul>
+								<li>
+									<a href="#" target="_blank">网站地址</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">网站地址</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">网站地址</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">网站地址</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">网站地址</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">网站地址</a>
+								</li>
+							<ul>
+						</div>
+					</div>
+					<div class="clearboth">
+						<div class="title">栏目名称</div>
+						<div class="list">
+							<ul>
+								<li>
+									<a href="#" target="_blank">网站地址</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">网站地址</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">网站地址</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">网站地址</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">网站地址</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">网站地址</a>
+								</li>
+							<ul>
+						</div>
+					</div>
+					<div class="clearboth">
+						<div class="title">栏目名称</div>
+						<div class="list">
+							<ul>
+								<li>
+									<a href="#" target="_blank">网站地址</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">网站地址</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">网站地址</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">网站地址</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">网站地址</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">网站地址</a>
+								</li>
+							<ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--mainbox end-->
+			
+			<!--footer start-->
+			<div  class="footer-box">
+				<div class="footer">
+					<p>
+						粤IVP备：15039091号-8      页面版权所属：深圳壳公思网络股份有限公司
+					</p>
+				</div>
+			</div>
+			<!--footer end-->
+		</div>
+	</body>
+</html>

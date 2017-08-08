@@ -1,0 +1,132 @@
+.main{
+	height:auto;
+	width:1200px;
+	margin:0 auto;
+}
+/*********内页详情页css**********/
+.lf-box{
+	float:left;
+	width:235px;
+	height:auto;
+}
+.rg-box{
+	float:left;
+	padding:0 20px 20px 20px;
+	width:925px;
+}
+.lf-box dl dt{
+	height:55px;
+	width:235px;
+	background:#339966;
+	text-align:center;
+	line-height:55px;
+	color:#fff;
+}
+.lf-box dl dd{
+	height:40px;
+	width:233px;
+	line-height:40px;
+	border:1px solid #E4E4E4;
+	margin-top:-1px;
+}
+.lf-box dl .active{
+	background:#eee;
+}
+.lf-box dl dd a{
+	display:block;
+	color:#333;
+	text-align:center;
+}
+.lf-box .active{
+	background:#eee;
+	color:#fff;
+}
+@media screen and (min-height:700px){
+	.main{
+		height:680px;
+	}
+}
+/*********内页详情页css**********/
+
+/*********内页列表页css**********/
+.colum-type dl{
+	margin:15px auto;
+	font-size:0;
+	background:#fff;
+}
+.colum-type dl dt{
+	display:inline-block;
+	width:130px;
+	height:50px;
+	float:left;
+	line-height:50px;
+	text-align:center;
+	color:#fff;
+	font-size:14px;
+	background:#FF9900;
+}
+.colum-type dl dd{
+	width:110px;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	font-size:14px;
+	display:inline-block;
+}
+.colum-type dl dd a{
+	color:#333;
+	display:block;
+}
+.colum-type dl dd a:hover{color:#009966;}
+.colum-list{
+	padding:20px 0;
+	background:#fff;
+}
+.colum-list .title{
+	width:130px;
+	float:left;
+	line-height:40px;
+	text-align:center;
+	color:#333;
+	font-size:14px;
+}
+.colum-list .list{
+	font-size:0;
+	height:auto;
+	width:1068px;
+	float:left;
+}
+.colum-list .list li{
+	width:210px;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	font-size:14px;
+	display:inline-block;
+}
+.colum-list .list li a{
+	display:block;
+	color:#6666CC;
+}
+.colum-list .list li a:hover{
+	color:#FF9900;
+}
+/*********内页列表页css**********/
+#search .search-result{
+	height:auto;
+	width:625px;
+	margin:0 auto;
+}
+#search .search-result .item{
+	margin:30px 0;
+}
+#search .search-result .item a{
+	color:#6666CC;
+	font-size:16px;
+	font-weight:bolder;
+	text-decoration: underline;
+}
+#search .search-result .item p{
+	margin-top:5px;
+	color:#66CC00;
+}
